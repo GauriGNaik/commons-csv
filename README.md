@@ -93,7 +93,7 @@ Team:
 Gauri Naik (gnaik2), 
 Arvind Telharkar(adtelhar), 
 Ravneet Kaur(ravnee)
-
+All worked on it together. 
 
 
 
