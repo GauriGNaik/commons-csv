@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.apache.commons.csv.CSVParserTest" time="0.048" tests="62" errors="0" skipped="3" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.60-b23"/>
+    <property name="user.country.format" value="IN"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/gaurigurunathnaik/Desktop/commons-csv"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/gaurigurunathnaik/Desktop/commons-csv"/>
+    <property name="java.runtime.version" value="1.8.0_60-b27"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/hl/ynfkjtqd549_mmbr7wzqz4tc0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.3.3/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/gaurigurunathnaik/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.10.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/gaurigurunathnaik"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="gaurigurunathnaik"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.3.3/libexec/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_60"/>
+    <property name="java.ext.dirs" value="/Users/gaurigurunathnaik/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.3.3/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testBackslashEscapingOld" classname="org.apache.commons.csv.CSVParserTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testStartWithEmptyLinesThenHeaders" classname="org.apache.commons.csv.CSVParserTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testExcelHeaderCountLessThanData" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testMultipleIterators" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testHeaderComment" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testDefaultFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.015"/>
+  <testcase name="testGetRecordPositionWithCRLF" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testHeaderMissing" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testBOM" classname="org.apache.commons.csv.CSVParserTest" time="0">
+    <skipped message="CSV-107"/>
+  </testcase>
+  <testcase name="testProvidedHeaderAuto" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testGetRecordWithMultiLineValues" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testParseNullStringFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testGetRecordNumberWithCR" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetRecordNumberWithLF" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testCSV57" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testClose" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetLineNumberWithCR" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetLineNumberWithLF" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testParserUrlNullCharsetFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testForEach" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetOneLine" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testGetLineNumberWithCRLF" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testCarriageReturnLineFeedEndings" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testGetRecordNumberWithCRLF" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testParseUrlCharsetNullFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testEmptyFile" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testCarriageReturnEndings" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetLine" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetRecordPositionWithLF" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetOneLineOneParser" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testHeadersMissingException" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testProvidedHeader" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testParseNullUrlCharsetFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testInvalidFormat" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testBackslashEscaping2" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testExcelFormat1" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testExcelFormat2" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testEndOfFileBehaviourExcel" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testRoundtrip" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testNoHeaderMap" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testParseFileNullFormat" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testGetHeaderMap" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testBackslashEscaping" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testLineFeedEndings" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testMappedButNotSetAsOutlook2007ContactExport" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testEmptyLineBehaviourCSV" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testSkipSetHeader" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testHeaderMissingWithNull" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testIgnoreEmptyLines" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testEndOfFileBehaviorCSV" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testNewCSVParserNullReaderFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testParseStringNullFormat" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testEmptyLineBehaviourExcel" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testHeader" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testGetRecords" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testHeadersMissing" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testBOMInputStream" classname="org.apache.commons.csv.CSVParserTest" time="0.011"/>
+  <testcase name="testDuplicateHeaders" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testIterator" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testParseNullFileFormat" classname="org.apache.commons.csv.CSVParserTest" time="0.001"/>
+  <testcase name="testSkipAutoHeader" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+  <testcase name="testNewCSVParserReaderNullFormat" classname="org.apache.commons.csv.CSVParserTest" time="0"/>
+</testsuite>
