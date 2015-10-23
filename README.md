@@ -35,11 +35,11 @@ The milestone one project contains the following:
 6.   For Security tokens, we have checked the following three things:  
     
     - pem files - Checked the repository for .pem files, and rejected the commit if it's present.
-    - ssh keys - Checked the repository for ssh keys(id_rsa) in the whole repository and rejected the commit if it's present.
-    - AWS Tokens - Checked the Java source files for AWS Token Id's and Secret Keys. For AWS Token Id's, we have checked for strings in Uppercase and having length greater than 20. Such strings are good contenders for Token Id's.
-Similarly for AWS Secret keys, we have checked for alphanumeric strings having length greater than 40. 
+    - ssh keys - Checked the repository for ssh keys(id_rsa) in the whole repository and rejected the commit if it's        present.
+    - AWS Tokens - Checked the Java source files for AWS Token Id's and Secret Keys. For AWS Token Id's, we have            checked for strings in Uppercase and having length greater than 20. Such strings are good contenders for Token        Id's.
+      Similarly for AWS Secret keys, we have checked for alphanumeric strings having length greater than 40. 
         
-All the above checks have been made in pre-commit hook.
+      All the above checks have been made in pre-commit hook.
         
 NOTE: Please change PATH and SRC_PATH to point to correct location on your machine
 
