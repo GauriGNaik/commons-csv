@@ -18,7 +18,9 @@ The milestone one project contains the following:
 5.  For this task, we have configured cobertura to fail the build if the coverage falls below some specified criteria. So, on commit to the repository, the build will fail if the coverage decreases. Once, the build fails, we are checking in post-commit, the status of the Jenkins Build. On Build Failure, the last commit is reverted and repository goes back to previous state.
 ```
 #!/bin/bash
-prevStatus=`curl -silent http://localhost:8080/job/DevOpsMilestone2/lastBuild/api/json | grep -iEo 'result":"\w*'`
+#edit jobpath
+jobpath="http://localhost:8080/job/DevOpsMilestone2/lastBuild/api/json"
+prevStatus=`curl -silent $jobpath | grep -iEo 'result":"\w*'`
 prevStatus=${prevStatus/result\"\:\"/}
 if [[ "$prevStatus" == "FAILURE" ]]; then
     echo BUILD FAILURE, Reverting last Commit
