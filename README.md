@@ -32,7 +32,8 @@ NOTE: Please change jobpath to point to correct location on your machine
     fi
     ```
 
-6. For Security tokens, we have checked the following three things:
+6.
+    For Security tokens, we have checked the following three things:
     1.   pem files - 
         Checked the repository for .pem files, and rejected the commit if it's present.
     2.   ssh keys - 
