@@ -26,7 +26,6 @@ if [[ "$prevStatus" == "FAILURE" ]]; then
     echo git state back to normal
     exit 1
 fi
-
 ```
 6.   
 
