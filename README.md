@@ -14,7 +14,7 @@ The milestone one project contains the following:
 1.   
 2.   
 3.   
-4.   
+4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
 5.  For this task, we have configured cobertura to fail the build if the coverage falls below some specified criteria.     So, on commit to the repository, the build will fail if the coverage decreases. Once, the build fails, we are         checking in post-commit, the status of the Jenkins Build. On Build Failure, the last commit is reverted and           repository goes back to previous state.
 
     NOTE: Please change jobpath to point to correct location on your machine
