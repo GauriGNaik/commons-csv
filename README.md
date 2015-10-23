@@ -32,6 +32,59 @@ The milestone one project contains the following:
     ```
 
 6.   
+  ```
+#!/bin/bash
+
+#check for count of pem files
+PATH="/home/arvind/SampleMavenProject"
+PEM_FILES_COUNT=$(find $PATH -type f -name "*.pem" | wc -l)
+if [ $PEM_FILES_COUNT -ne 0 ]; then
+   echo "There are .pem files in this commit.Rejecting the commit!"
+   exit 1
+fi
+
+SSH_KEY_FILES_COUNT=$(find $PATH -type f -name "*id_rsa" | wc -l)
+if [ $SSH_KEY_FILES_COUNT -ne 0 ]; then
+   echo "There are ssh-key files in this commit.Rejecting the commit!"
+   exit 1
+fi
+
+#Now scan all the source files to check for tokens or api access keys for AWS
+
+SRC_PATH="/home/arvind/SampleMavenProject/src"
+LIST_OF_FILES=$(find $SRC_PATH -type f -name "*.java")
+
+#Get List of All .java files
+for file in $LIST_OF_FILES
+do
+ALL_CAPITAL_TOKENS=$(grep -Eo [\"]?[A-Z]+[\"]? $file)
+ALPHA_NUMERIC_TOKENS=$(grep -Eo [\"]?[0-9A-Za-z]+[\"]? $file)
+
+# now scan all the capitalized tokens to check for possible AWS key IDs
+ for token in $ALL_CAPITAL_TOKENS
+  do
+   l=${#token}
+   if [ $l -ge 20 ];then
+    echo "Seems like there are AWS Acccess key IDs in one or more source files.Please check again. Rejecting commit!"
+    exit 1
+   fi
+  done
+
+#now check the alphanumeric strings for length>=40
+ for token in $ALPHA_NUMERIC_TOKENS
+  do
+   l=${#token}
+   if [ $l -ge 40 ];then
+    echo "Seems like there are AWS Secret Acccess keys in one or more source files.Please check again. Rejecting commit!"
+    exit 1
+   fi
+  done
+done
+  
+  ```
+
+
+
 
 ### Screencast
 
