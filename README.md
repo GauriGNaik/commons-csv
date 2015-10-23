@@ -31,7 +31,8 @@ The milestone one project contains the following:
     fi
     ```
 
-6.   
+6.
+
   ```
 #!/bin/bash
 
