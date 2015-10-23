@@ -17,9 +17,10 @@ The milestone one project contains the following:
 4.   
 5.  For this task, we have configured cobertura to fail the build if the coverage falls below some specified criteria. So, on commit to the repository, the build will fail if the coverage decreases. Once, the build fails, we are checking in post-commit, the status of the Jenkins Build. On Build Failure, the last commit is reverted and repository goes back to previous state.
 
+NOTE: Please change jobpath to point to correct location on your machine
+
     ```
     #!/bin/bash
-    #edit jobpath
     jobpath="http://localhost:8080/job/DevOpsMilestone2/lastBuild/api/json"
     prevStatus=`curl -silent $jobpath | grep -iEo 'result":"\w*'`
     prevStatus=${prevStatus/result\"\:\"/}
@@ -42,11 +43,12 @@ The milestone one project contains the following:
         
     All the above checks have been made in pre-commit hook.
 
+NOTE: Please change PATH and SRC_PATH to point to correct location on your machine
   ```
 #!/bin/bash
 
 #check for count of pem files
-PATH="/home/arvind/SampleMavenProject"
+PATH="/home/arvind/commons-csv"
 PEM_FILES_COUNT=$(find $PATH -type f -name "*.pem" | wc -l)
 if [ $PEM_FILES_COUNT -ne 0 ]; then
    echo "There are .pem files in this commit.Rejecting the commit!"
@@ -61,7 +63,7 @@ fi
 
 #Now scan all the source files to check for tokens or api access keys for AWS
 
-SRC_PATH="/home/arvind/SampleMavenProject/src"
+SRC_PATH="/home/arvind/commons-csv/src"
 LIST_OF_FILES=$(find $SRC_PATH -type f -name "*.java")
 
 #Get List of All .java files
