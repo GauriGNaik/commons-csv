@@ -31,7 +31,16 @@ The milestone one project contains the following:
     fi
     ```
 
-6.
+6. For Security tokens, we have checked the following three things:
+    1.   pem files - 
+        Checked the repository for .pem files, and rejected the commit if it's present.
+    2.   ssh keys - 
+        Checked the repository for ssh keys(id_rsa) in the whole repository and rejected the commit if it's present.
+    3.   AWS Tokens - 
+        Checked the Java source files for AWS Token Id's and Secret Keys. For AWS Token Id's, we have checked for              strings in Uppercase and having length greater than 20. Such strings are good contenders for Token Id's.
+        Similarly for AWS Secret keys, we have checked for alphanumeric strings having length greater than 40. 
+        
+    All the above checks have been made in pre-commit hook.
 
   ```
 #!/bin/bash
