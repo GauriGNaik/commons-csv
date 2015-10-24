@@ -10,7 +10,7 @@ The milestone one project contains the following:
 
 * Used Apache Java Mavens project titled 'commons-csv'. 
 
-##Tasks
+##Test and Analysis for each task
 
 1.  To run junit tests, you need to add invoke top level maven targets and add 'verify' to maven goals in the build       step. Then in the post-build step publish junit test result report by giving the following path: 
     ```
