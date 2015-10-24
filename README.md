@@ -54,6 +54,21 @@ The milestone one project contains the following:
     It shows the improved coverage.
   
 3.   We have used the FindBugs static analysis tool. Add the findbugs plugin to jenkins. 
+     Add the following to the pom.xml file:
+     ```
+     <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>findbugs-maven-plugin</artifactId>
+          <version>2.3.1</version>
+          <configuration>
+              <effort>Max</effort>
+              <xmlOutput>true</xmlOutput>
+          </configuration>
+      </plugin>
+    </plugins>
+
+     
+     ```
      In the jenkins config, invoke top level maven targets adn add the goals:
     ```
     findbugs:findbugs 
