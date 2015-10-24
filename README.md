@@ -51,8 +51,15 @@ The milestone one project contains the following:
     Randoop generates test cases for the maven project. 
     Right click on the src/main/java and then apply Randoop test input. 
     Then specify src/test/java as the test folder for adding the Randoop test cases in the Randoop test configurations. Then right click on the project and check the coverage by clicking 'Cover as'. 
+    It shows the improved coverage.
   
-3.   
+3.   We have used the FindBugs static analysis tool. Add the findbugs plugin to jenkins. 
+     In the jenkins config, invoke top level maven targets adn add the goals:
+    ```
+    findbugs:findbugs 
+    ```
+    Then in the post build actions add the publish findbugs analysis report. 
+    
 4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
 
     ```
