@@ -43,11 +43,14 @@ The milestone one project contains the following:
     It is possible to view the unit tests report and coverage report
     
 2.  For fuzzing, we have used an eclipse plugin named Randoop. Since we used Apache Maven project, we add the following three plugins to eclipse:
+    ```
     Maven plugin named m2eclipse
     Coverage plugin named ecobertura
     Randoop plugin
+    ```
     Randoop generates test cases for the maven project. 
-    Right click on the src/main/java and then apply Randoop test input. Then specify src/test/java as the test folder for adding the Randoop test cases in the Randoop test configurations. Then right click on the project and check the coverage by clicking 'Cover as'. 
+    Right click on the src/main/java and then apply Randoop test input. 
+    Then specify src/test/java as the test folder for adding the Randoop test cases in the Randoop test configurations. Then right click on the project and check the coverage by clicking 'Cover as'. 
   
 3.   
 4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
