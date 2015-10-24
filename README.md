@@ -11,7 +11,7 @@ The milestone one project contains the following:
 * Used Apache Java Mavens project titled 'commons-csv'. 
 
 ##Tasks
-1. To run junit tests, you need to add invoke top level maven targets and add 'verfiy' to maven goals in the build step. Then in the post-build step publish junit test result report by giving the following path: 
+1. To run junit tests, you need to add invoke top level maven targets and add 'verify' to maven goals in the build step. Then in the post-build step publish junit test result report by giving the following path: 
 ```
 **/target/surefire-reports/*.xml
 ```
@@ -30,9 +30,9 @@ Then add the following to the pom.xml of the project:
               </formats>
           </configuration>
       </plugin>
-      ```
-  In jenkins config file invok top level maven targets and in goals specify: 
-  ```
+ ```
+In jenkins config file invok top level maven targets and in goals specify: 
+```
 clean cobertura:cobertura -Dcobertura.report.format=xml 
 ```
 Then publish coverage report in post build action by specifying the following report pattern:
