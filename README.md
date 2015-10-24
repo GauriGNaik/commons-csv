@@ -11,7 +11,29 @@ The milestone one project contains the following:
 * Used Apache Java Mavens project titled 'commons-csv'. 
 
 ##Tasks
-1.   
+1. To run junit tests, you need to add invoke top level maven targets and add 'verfiy' to maven goals in the build step. Then in the post-build step publish junit test result report by giving the following path: 
+**/target/surefire-reports/*.xml
+To run coverage, you add the cobertura plugin to jenkins. 
+Then add the following to the pom.xml of the project: 
+ <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.5.1</version>
+          <configuration>
+              <formats>
+                  <format>html</format>
+                  <format>xml</format>
+              </formats>
+          </configuration>
+      </plugin>
+  In jenkins config file invok top level maven targets and in goals specify: 
+clean cobertura:cobertura -Dcobertura.report.format=xml 
+Then publish coverage report in post build action by specifying the following report pattern:
+**/target/site/cobertura/coverage.xml
+It is possible to view the unit tests report and coverage report
+
+2.  
+   
 2.   
 3.   
 4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
