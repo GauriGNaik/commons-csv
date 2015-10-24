@@ -16,7 +16,20 @@ The milestone one project contains the following:
 3.   
 4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
 
-    ![commentstolines ratio](https://cloud.githubusercontent.com/assets/8634231/10707506/57310208-79c1-11e5-9e73-bd72022fecde.png)
+```
+#!/bin/bash
+LIST_OF_FILES=$(find "src/main/java/org/apache/commons/csv" -type f -name "*.java")
+#Get List of All .java files
+for file in $LIST_OF_FILES
+do
+let a=$(grep "\/[\/|*]" $file | wc -l)
+let b=$(cat $file | wc -l)
+echo "#####--Comments/Code Ratio For Java Source Files--#####"
+echo "The ratio of commments to code for file $file is" $a"/"$b
+done
+```
+
+![commentstolines ratio](https://cloud.githubusercontent.com/assets/8634231/10707506/57310208-79c1-11e5-9e73-bd72022fecde.png)
 
 5.  For this task, we have configured cobertura to fail the build if the coverage falls below some specified criteria.     So, on commit to the repository, the build will fail if the coverage decreases. Once, the build fails, we are         checking in post-commit, the status of the Jenkins Build. On Build Failure, the last commit is reverted and           repository goes back to previous state.
 
