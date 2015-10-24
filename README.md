@@ -12,9 +12,7 @@ The milestone one project contains the following:
 
 ##Tasks
 
-1.  sdfsfd
-    
-    To run junit tests, you need to add invoke top level maven targets and add 'verify' to maven goals in the build       step. Then in the post-build step publish junit test result report by giving the following path: 
+1.  To run junit tests, you need to add invoke top level maven targets and add 'verify' to maven goals in the build       step. Then in the post-build step publish junit test result report by giving the following path: 
     ```
     **/target/surefire-reports/*.xml
     ```
@@ -43,7 +41,7 @@ The milestone one project contains the following:
     **/target/site/cobertura/coverage.xml
     ```
     It is possible to view the unit tests report and coverage report
-    cvxvxcvxv
+    
 2.   
 3.   
 4.  For this task, we have implemented static analysis to check for the comments/line ratio in source files and           displayed the results for each file on Jenkins console.
